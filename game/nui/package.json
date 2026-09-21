@@ -1,0 +1,19 @@
+{
+  "name": "@screencapture/nui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "@screencapture/gameview": "workspace:*",
+    "mediabunny": "^1.40.1"
+  }
+}

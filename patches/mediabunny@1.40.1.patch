@@ -1,0 +1,21 @@
+diff --git a/dist/modules/src/media-source.js b/dist/modules/src/media-source.js
+--- a/dist/modules/src/media-source.js
++++ b/dist/modules/src/media-source.js
+@@ -318,3 +318,7 @@ class VideoEncoderWrapper {
+                 if (this.encoder.encodeQueueSize >= 4) {
+-                    await new Promise(resolve => this.encoder.addEventListener('dequeue', resolve, { once: true }));
++                    if (typeof this.encoder.addEventListener === 'function') {
++                        await new Promise(resolve => this.encoder.addEventListener('dequeue', resolve, { once: true }));
++                    } else {
++                        await this.encoder.flush();
++                    }
+                 }
+@@ -1287,3 +1291,7 @@ class AudioEncoderWrapper {
+                 if (this.encoder.encodeQueueSize >= 4) {
+-                    await new Promise(resolve => this.encoder.addEventListener('dequeue', resolve, { once: true }));
++                    if (typeof this.encoder.addEventListener === 'function') {
++                        await new Promise(resolve => this.encoder.addEventListener('dequeue', resolve, { once: true }));
++                    } else {
++                        await this.encoder.flush();
++                    }
+                 }

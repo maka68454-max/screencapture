@@ -1,0 +1,18 @@
+{
+  "name": "@screencapture/react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["react", "fivem", "screenshot-basic", "screenshot", "webgl"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.3",
+    "@screencapture/typescript-config": "workspace:*",
+    "@screencapture/gameview": "workspace:*"
+  }
+}

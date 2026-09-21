@@ -1,0 +1,40 @@
+{
+  "name": "screencapture",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:gameview": "pnpm --filter @screencapture/gameview build",
+    "build:game": "pnpm --filter @screencapture/game build",
+    "build:nui": "pnpm --filter @screencapture/nui build",
+    "build:metrics": "pnpm --filter @screencapture/metrics-worker build",
+    "dev:metrics": "pnpm --filter @screencapture/metrics-worker dev",
+    "deploy:metrics": "pnpm --filter @screencapture/metrics-worker deploy",
+    "types:live-worker": "pnpm --filter @screencapture/live-worker types",
+    "typecheck:live-worker": "pnpm --filter @screencapture/live-worker typecheck",
+    "build:live-worker": "pnpm --filter @screencapture/live-worker build",
+    "dev:live-worker": "pnpm --filter @screencapture/live-worker dev",
+    "deploy:live-worker": "pnpm --filter @screencapture/live-worker deploy",
+    "dev:docs": "pnpm --filter @screencapture/docs dev",
+    "build:docs": "pnpm --filter @screencapture/docs build",
+    "preview:docs": "pnpm --filter @screencapture/docs preview",
+    "check:docs-worker": "pnpm --filter @screencapture/docs check:deploy",
+    "deploy:docs": "pnpm --filter @screencapture/docs deploy",
+    "build:live-sdk": "pnpm --filter @screencapture/live build",
+    "build": "pnpm turbo build"
+  },
+  "keywords": [],
+  "author": "itschip",
+  "license": "MIT",
+  "pnpm": {
+    "patchedDependencies": {
+      "mediabunny@1.40.1": "patches/mediabunny@1.40.1.patch"
+    }
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.2",
+    "typescript": "^5.5.3"
+  },
+  "packageManager": "pnpm@9.11.0"
+}

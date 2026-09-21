@@ -1,0 +1,9 @@
+{
+	"extends": "@screencapture/typescript-config/react.json",
+	"compilerOptions": {
+		"outDir": "dist",
+        "jsx": "react-jsx"
+	},
+	"include": ["**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules", "dist"]
+}

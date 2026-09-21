@@ -1,0 +1,22 @@
+:root {
+  --sl-color-accent-low: #d9f2ec;
+  --sl-color-accent: #007f73;
+  --sl-color-accent-high: #003f39;
+  --sl-color-white: #fbfffd;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #003f39;
+  --sl-color-accent: #40d4bd;
+  --sl-color-accent-high: #c5fff2;
+  --sl-color-bg: #101817;
+  --sl-color-bg-sidebar: #0d1413;
+}
+
+.hero {
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.site-title {
+  letter-spacing: 0;
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "@screencapture/typescript-config/base.json",
+  "compilerOptions": {
+    "types": ["@types/node", "@citizenfx/client"],
+    "moduleResolution": "nodenext",
+    "module": "nodenext"
+  },
+  "include": ["**/*.ts"]
+}

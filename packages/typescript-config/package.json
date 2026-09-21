@@ -1,0 +1,10 @@
+{
+	"name": "@screencapture/typescript-config",
+	"version": "0.0.0",
+	"private": true,
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "itschip",
+	"license": "MIT"
+}

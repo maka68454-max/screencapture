@@ -1,0 +1,41 @@
+---
+title: ScreenCapture
+description: FiveM screenshot, video, upload, and live streaming documentation.
+template: splash
+hero:
+  tagline: A FiveM resource for screenshots, WebM recording, remote uploads, and WebRTC game-view streams.
+  actions:
+    - text: Install ScreenCapture
+      link: /installation/
+      variant: primary
+    - text: Explore the screenshot API
+      link: /screenshots/
+      variant: secondary
+---
+
+ScreenCapture is a modern replacement for `screenshot-basic` with compatibility exports for existing resources. It captures still images, records WebM video through the player's NUI, uploads media to remote APIs, and can publish one-to-many live game-view streams through Cloudflare Realtime SFU.
+
+## What You Can Build
+
+- Moderation tools that capture evidence from a player's current game view.
+- Admin panels that upload screenshots or recordings to an external media service.
+- Incident review workflows that store local WebM captures for later processing.
+- Live staff spectating tools that do not relay video through FiveM events.
+
+## Main Capabilities
+
+| Capability | Use it when |
+| --- | --- |
+| Server screenshots | You need base64 data URIs, binary blobs, or direct remote uploads. |
+| WebM video capture | You need timed or manually stopped recordings from a player's NUI. |
+| Remote upload helpers | You want the resource to send screenshots or videos to an API endpoint. |
+| Live streaming | You need browser viewers connected through Cloudflare Realtime SFU. |
+| Compatibility exports | Existing resources call `screenshot-basic` exports. |
+
+## Quick Path
+
+1. [Install the resource](/installation/) and ensure it before resources that call its exports.
+2. [Review protocol and bandwidth settings](/configuration/) for your server environment.
+3. Use the [screenshot](/screenshots/), [video](/video/), or [live streaming](/live-streaming/) APIs from your own resources.
+4. Build browser viewers with [`@screencapture/live`](/packages/live/) or NUI capture tools with [`@screencapture/gameview`](/packages/gameview/).
+5. Check [realtime workflow examples](/examples/realtime/) and [operations](/operations/) when tuning transfer speeds or troubleshooting captures.

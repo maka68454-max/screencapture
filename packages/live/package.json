@@ -1,0 +1,29 @@
+{
+  "name": "@screencapture/live",
+  "version": "0.1.0",
+  "description": "Framework-neutral browser viewer for screencapture live streams",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --minify --dts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["fivem", "webrtc", "screencapture"],
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.3"
+  }
+}

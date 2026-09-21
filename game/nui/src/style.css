@@ -1,0 +1,54 @@
+* {
+  background: transparent;
+  background-color: transparent;
+}
+
+body {
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.live-stream-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  min-width: 190px;
+  padding: 10px 14px 10px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 4px;
+  background: rgba(12, 15, 18, 0.9);
+  color: #ffffff;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0;
+  pointer-events: none;
+}
+
+.live-stream-indicator::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4d4f;
+  box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.2);
+}
+
+.live-stream-indicator[data-state="connecting"]::before,
+.live-stream-indicator[data-state="reconnecting"]::before {
+  background: #f5b942;
+  box-shadow: 0 0 0 3px rgba(245, 185, 66, 0.2);
+  animation: live-stream-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes live-stream-pulse {
+  50% {
+    opacity: 0.4;
+  }
+}

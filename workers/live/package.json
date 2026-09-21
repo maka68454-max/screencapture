@@ -1,0 +1,28 @@
+{
+  "name": "@screencapture/live-worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "types": "wrangler types",
+    "typecheck": "tsc --noEmit",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir dist"
+  },
+  "cloudflare": {
+    "bindings": {
+      "CALLS_APP_ID": {
+        "description": "Your Cloudflare Realtime SFU **App ID** from the Realtime dashboard."
+      },
+      "CALLS_APP_SECRET": {
+        "description": "Your Cloudflare Realtime SFU **App Secret**. This is stored as an encrypted Worker secret."
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.118.0"
+  }
+}
